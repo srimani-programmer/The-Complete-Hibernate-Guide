@@ -14,17 +14,18 @@ public class StudentApp {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			int id = sc.nextInt();
-			String rollNumber = sc.next();
-			String studentName = sc.next();
-			int studentAge = sc.nextInt();
-			double studentPercentage = sc.nextDouble();
-			String fatherName = sc.next();
-			String motherName = sc.next();
+//			int id = sc.nextInt();
+//			String rollNumber = sc.next();
+//			String studentName = sc.next();
+//			int studentAge = sc.nextInt();
+//			double studentPercentage = sc.nextDouble();
+//			String fatherName = sc.next();
+//			String motherName = sc.next();
 			
-			Student student = new Student(id, rollNumber, studentName, studentAge, studentPercentage, fatherName, motherName);
+			Student student = new Student(1, "22D6JH93729A11", "Alex", 17, 92.7, "Thomas", "Julie");
 			
 			Configuration config =  DBUtil.getConfig();
+			
 			config.addAnnotatedClass(Student.class);
 			
 			Session session = DBUtil.getSession(config);

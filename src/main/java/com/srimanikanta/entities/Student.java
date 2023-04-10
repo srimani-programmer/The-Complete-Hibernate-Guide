@@ -1,19 +1,38 @@
 package com.srimanikanta.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "students")
 public class Student {
 
 	@Id
 	private int studentid;
+	
+	@Column(name = "RollNumber")
 	private String rollNumber;
+	
+	@Column(name = "StudentName")
 	private String studentName;
+	
+	@Column(name = "StudentAge")
 	private int studentAge;
+	
+	@Column(name= "StudentPercentae")
 	private double studentPercentage;
+
+	@Column(name="StudentFathername")
 	private String studentFatherName;
+	
+	@Column(name="StudentMothername")
 	private String studentMotherName;
+	
+	public Student() {
+		
+	}
 	
 	public Student(int studentid, String rollNumber, String studentName, int studentAge, double studentPercentage,
 			String studentFatherName, String studentMotherName) {
